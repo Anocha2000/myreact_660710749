@@ -5,7 +5,7 @@ import TodoList from './TodoList';
 function ComponentExamples() {
     return (
         <div style={{
-            maxWidth: '700px',
+            maxWidth: '800px',
             margin: '0 auto',
             padding: '20px',
             fontFamily: 'Arial, sans-serif'
@@ -13,7 +13,7 @@ function ComponentExamples() {
         }}>
             <h1 style={{
                 textAlign: 'center',
-                color: '#fed0f7ff',
+                color: '#000000ff',
                 marginBottom: '40px'
 
                 
@@ -25,11 +25,11 @@ function ComponentExamples() {
             <section style={{
                 marginBottom: '40px',
                 padding: '20px',
-                border: '1px solid #eee',
+                border: '1px solid #efeebbff',
                 borderRadius: '8px',
-                backgroundColor: '#f2dbf3ff'
+                backgroundColor: '#f8ecceff'// เปลี่ยนสีพื้นหลังเตรงprofile
             }}>
-                <h2 style={{ color: '#ffffffff', marginBottom: '20px' }}>
+                <h2 style={{ color: '#ed8edfff', marginBottom: '20px' }}>
                     PROFILE
                 </h2>
                 <UserCard />
@@ -40,10 +40,10 @@ function ComponentExamples() {
                 padding: '20px',
                 border: '1px solid #eee',
                 borderRadius: '8px',
-                backgroundColor: '#f8ecceff'
+                backgroundColor: '#f8ecceff' //ตรงmy 7 day plan อันใหญ่
             }}>
                 <h2 style={{ color: '#333', marginBottom: '20px' }}>
-                    WEEK5
+                    
                 </h2>
                 <TodoList />
             </section>

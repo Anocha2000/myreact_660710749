@@ -3,15 +3,15 @@ import React from 'react';
 const TodoList = () => {
     // ข้อมูลที่จะแสดง
     const todos = [
-        { id: 1, text: 'เรียนภาษาอังกฤษ', completed: true },
-        { id: 2, text: 'เรียน BIS', completed: true },
-        { id: 3, text: 'เรียน Frontend กับ DST', completed: true },
-        { id: 4, text: 'สระผม', completed: false },
-        { id: 5, text: 'ไปซื้อของใช้เข้าห้อง', completed: false },
-        { id: 6, text: 'ซักผ้า ทำความสะอาดห้อง', completed: false },
-        { id: 7, text: 'อ่านหนังสือทบทวนก่อนสอบ', completed: false }
+        { id: 1, text: 'Mon : 📒เรียนภาษาอังกฤษ', completed: true },
+        { id: 2, text: 'Tue : 🧁เรียน BIS', completed: true },
+        { id: 3, text: 'Wed : 🥑เรียน Frontend & DST', completed: true },
+        { id: 4, text: 'Thu : 🥕เรียน backend & AI', completed: false },
+        { id: 5, text: 'Fri : 🪬ไปซื้อของใช้เข้าห้อง', completed: false },
+        { id: 6, text: 'Sat : 🍇ซักผ้า ทำความสะอาดห้อง', completed: false },
+        { id: 7, text: 'Sun : 🎈อ่านหนังสือทบทวนก่อนสอบ', completed: false }
     ];
-    
+ 
     // คำนวณสถิติ
     const completedCount = todos.filter(todo => todo.completed).length;
     const totalCount = todos.length;
@@ -19,17 +19,18 @@ const TodoList = () => {
     
     return (
         <div style={{ maxWidth: '500px', margin: '20px auto', padding: '20px' }}>
-            <h3>📝 รายการที่ต้องทำ</h3>
+            
+            <h3>📍MY 7 Day Plan</h3>
             
             {/* Progress Bar */}
             <div style={{
-                backgroundColor: '#f6f4bdff',
+                backgroundImage: 'linear-gradient(to right, #f8b8e2ff, #f9fcb3ff)',//สีพื้นหลังตรง%---ดำ
                 borderRadius: '20px',
                 padding: '3px',
                 margin: '15px 0'
             }}>
                 <div style={{
-                    backgroundColor: '#eda9f0ff',
+                    backgroundColor: '#e9aadfff', //ตรง%สีชมพู
                     width: `${percentage}%`,
                     textAlign: 'center',
                     borderRadius: '17px',
@@ -71,8 +72,6 @@ const TodoList = () => {
                     </div>
                 ))}
             </div>
-            
-            {/* Summary */}
             <div style={{
                 marginTop: '20px',
                 textAlign: 'center',
@@ -84,6 +83,7 @@ const TodoList = () => {
             }}>
                 ✨ ทำเสร็จแล้ว {completedCount} จาก {totalCount} รายการ
             </div>
+
         </div>
     );
 };
